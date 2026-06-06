@@ -8,7 +8,7 @@ dynamodb = boto3.resource('dynamodb', region_name=region)
 s3 = boto3.client('s3', region_name=region)
 
 table = dynamodb.Table('TicketOrders')
-bucket_name = 'nama-bucket-tiket-anda-123' # Sesuaikan dengan S3 Bucket Anda
+bucket_name = 'my-tf-ticket-bucket' # Sesuaikan dengan S3 Bucket Anda
 
 def process_pending_orders():
     # Scan tabel untuk mencari status PENDING (Untuk production gunakan GSI)
